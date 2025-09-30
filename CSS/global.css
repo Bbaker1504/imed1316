@@ -12,10 +12,13 @@
 :root {
 
 /* var(--primaryColor) !important; */
---primaryColor: #42269E;
+--primaryColor: #42269e;
+
+/* var(--secondaryColor) !important; */
+--secondaryColor: #ffed2b;
 
 /* var(--accentColor) !important; */
---accentColor: #ffedff2B;
+--accentColor: #3A5555;
 
 /* var(--fontFamily) !important; */
 --fontFamily: "Montserrat", serif;
