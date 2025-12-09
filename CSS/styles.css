@@ -1,5 +1,105 @@
-@import 'global.css';
-@import 'main.css';
+<style>
+/* 🌼 General Styling */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fffdf8;
+  color: #333;
+}
+
+/* 🌈 Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffe5d4;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 3px solid #f5b7a2;
+}
+
+/* 🌻 Logo */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #a64b35;
+  text-decoration: none;
+}
+
+/* 🌷 Nav Menu Styles */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #5a2e1b;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+  background-color: #ffd6bf;
+  color: #a64b35;
+}
+
+/* 🌿 Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #a64b35;
+  cursor: pointer;
+}
+
+/* 🌸 Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffe5d4;
+    border-top: 2px solid #f5b7a2;
+    margin-top: 0.5rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+
+  .nav-menu li a {
+    display: block;
+    width: 100%;
+  }
+}
+</style>
+
+<script>
+  // 🌼 Mobile Menu Toggle
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("#nav-menu");
+
+  menuToggle.addEventListener("click", function () {
+    const expanded = this.getAttribute("aria-expanded") === "true" || false;
+    this.setAttribute("aria-expanded", !expanded);
+    navMenu.classList.toggle("active");
+  });
+</script>@import 'main.css';
 
 
 .carousel-caption {
@@ -15,7 +115,7 @@ p {
 .blinn-fa-icon {
     font-size: 60px;
     color: #ffffff;
-    
+
 }
 
 
